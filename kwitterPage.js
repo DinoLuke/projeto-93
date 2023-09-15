@@ -1,14 +1,10 @@
 //LINKS FIREBASE
-const firebaseConfig = {
-apiKey: "AIzaSyAXPOIWXPBV13yUMTcOFZBmkJM2htqfNFE",
-authDomain: "aplicativolegaldeconversa.firebaseapp.com",
-projectId: "aplicativolegaldeconversa",
-storageBucket: "aplicativolegaldeconversa.appspot.com",
-messagingSenderId: "111768436797",
-appId: "1:111768436797:web:bb10ebcd730bda67002a54"
-};
-
+var firebaseConfig = { apiKey: "AIzaSyA00TLM0ZRYzDr3JTYjWImQ7b8HGp747B4", authDomain: "appconversa-50f74.firebaseapp.com", databaseURL:
+"https://appconversa-50f74-default-rtdb.firebaseio.com",
+projectId: "appconversa-50f74", storageBucket: "appconversa-50f74.appspot.com", messagingSenderId: "786246396111", appId: "1:786246396111:web:6af6f8931725cec7b3efba" }; 
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
 
 userName = localStorage.getItem("userName");
 roomName = localStorage.getItem("roomName");
@@ -32,10 +28,10 @@ console.log(firebaseMessageId);
 console.log(messageData);
 name = messageData ['name'];
 like = messageData['like'];
-message = messsageData['message'];
-nameWitTag = "<h4> "+ name +"<img class='user_tick' src='tick.png'></h4>";
+message = messageData['message'];
+nameWithTag = "<h4> "+ name +"<img class='user_tick' src='tick.png'></h4>";
 messageWithTag = "<h4 class='message_h4'>" + message + "</h4>";
-likeButtton = "<button class='btn btn-warning' id="+firebaseMessageId+" value="+like+" onclick='updateLike(this.id)'>";
+like_button = "<button class='btn btn-warning' id="+firebaseMessageId+" value="+like+" onclick='updateLike(this.id)'>";
 spanWithtag = "<span class='glyphicon glyphicon-thumbs-up'>like: "+ like +"</span></button><hr>";
 
 
